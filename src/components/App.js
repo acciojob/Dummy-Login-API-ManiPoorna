@@ -47,12 +47,12 @@ const App = () => {
       <form onSubmit={(e) => checkUser(e)}>
         <input id='input-email' type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} /><br />
         <input id='input-password' type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} /><br />
-        <button type='submit' id='submit-form-btn' >Submit</button>
-        {
-          Uerror ? <p id='user-error' style={{ color: "red" }}>{errUMsg}</p> : ""
-        }
         {
           Perror ? <p id='password-error' style={{ color: "red" }}>{errMsg}</p> : ""
+        }
+        <button type='submit' id='submit-form-btn' >Submit</button>
+        {
+          Uerror ? <p id="user-error" style={{ color: "red" }}>{errUMsg}</p> : ""
         }
       </form>
     </div>
